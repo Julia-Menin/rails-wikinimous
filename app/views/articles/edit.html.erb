@@ -1,0 +1,19 @@
+<h1>Edit the article</h1>
+
+<div class= m-4>
+  <%= form_with model: @article do |f| %>
+  <div class = "my-2 p-1">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </div>
+  <div class = "my-2 p-1">
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+</div>
+
+<div class = "my-2 p-1">
+<%= link_to "Back to main page", article_path%>
+</div>
