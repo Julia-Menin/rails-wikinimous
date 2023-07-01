@@ -13,8 +13,8 @@ puts "Done!"
 puts "Creating articles..."
 10.times do
   article = Article.new(
-    title: Faker::Marketing.buzzwords,
-    content: Faker::Lorem.sentences
+    title: Faker::Marketing.buzzwords.capitalize,
+    content: Faker::Lorem.paragraph_by_chars
   )
   article.save!
 end
